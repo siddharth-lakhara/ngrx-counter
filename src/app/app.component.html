@@ -5,4 +5,8 @@
     <button (click)="increment()">+</button>
   </div>
   <button class="reset-btn" (click)="reset()">Reset</button>
+  <div>
+    <input type="number" [value]="newCount" (change)="saveNewCount($event)"/>
+    <button (click)="setCountValue()">Submit</button>
+  </div>
 </div>

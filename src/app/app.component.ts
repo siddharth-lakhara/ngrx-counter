@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnDestroy {
   public count: number;
+  public newCount: number;
   private subs = new Subscription();
 
   constructor(private store: Store<RootState>) {
@@ -34,5 +35,14 @@ export class AppComponent implements OnDestroy {
 
   public reset() {
     this.store.dispatch(counterActions.reset());
+  }
+
+  public saveNewCount(evt: Event) {
+    this.newCount = +(<HTMLInputElement>evt.target).value;
+  };
+
+  public setCountValue() {
+    this.store.dispatch(counterActions.setCount({ count: this.newCount }));
+    this.newCount = 0;
   }
 }

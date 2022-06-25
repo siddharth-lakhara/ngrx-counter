@@ -16,5 +16,9 @@ export const counterReducer = createReducer(
   on(counterActions.reset, (state: AppState) => ({
     ...state,
     count: 0,
+  })),
+  on(counterActions.setCount, (state: AppState, { count }) => ({
+    ...state,
+    count,
   }))
 );
