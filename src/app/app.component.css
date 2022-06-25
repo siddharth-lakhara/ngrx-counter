@@ -1,0 +1,13 @@
+
+.counter-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+
+  width: 300px;
+  margin: 20px;
+}
+
+button {
+  cursor: pointer;
+}
