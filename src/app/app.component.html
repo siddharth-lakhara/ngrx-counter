@@ -1,5 +1,8 @@
-<div class="counter-wrapper">
-  <button (click)="decrement()">-</button>
-  <div>{{ counter }} </div>
-  <button (click)="increment()">+</button>
+<div class="counter-component">
+  <div class="counter-wrapper">
+    <button (click)="decrement()">-</button>
+    <div>{{ count }}</div>
+    <button (click)="increment()">+</button>
+  </div>
+  <button class="reset-btn" (click)="reset()">Reset</button>
 </div>

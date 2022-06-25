@@ -1,7 +1,11 @@
 export interface AppState {
-  counter: number
+  count: number;
+}
+
+export interface RootState {
+  counter: AppState;
 }
 
 export const initialState = {
-  counter: 0
+  count: 0,
 };
